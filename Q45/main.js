@@ -1,7 +1,9 @@
 "use strict";
-function createCar(manufacture, model, optional) {
-    return Object.assign({ manufacture,
-        model }, optional);
+function make_car(manufacturer: string, model: string, ...options: [string, any][]): Object {
+    let car : any = { manufacturer, model };
+    options.forEach(([key, value]) => car[key] = value);
+    return car;
 }
-const mycar = createCar('suzuki', 'corola', { color: "Black", year: "2023" });
-console.log(mycar);
+
+console.log(make_car("Toyota", "Corolla", ["color", "white"], ["year", 2023]));
+console.log(make_car("Suzuki", "Mehran", ["color", "blue"], ["sunroof", true]));
