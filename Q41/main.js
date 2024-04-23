@@ -1,8 +1,11 @@
 "use strict";
-function show_magicians(magicians) {
-    for (const magician of magicians) {
-        console.log(magician.charAt(0).toUpperCase() + magician.slice(1));
-    }
+let magician: string[] = ['faizan', 'ahmad', 'saim', 'salman'];
+
+function show_magicians(magicians : string[]){
+    magicians.forEach(element => {
+       console.log(element);
+        
+    });
 }
-const magician = ['faizan', 'ahmad', 'saim', 'salman'];
+
 show_magicians(magician);
