@@ -6,7 +6,7 @@
 // which prints the name of each magician in the array.
 
 
-let magician: string[] = ['faizan', 'ahmad', 'saim', 'salman'];
+let magician: string[] = ['Faizan', 'Ahmad', 'Saim', 'Salman'];
 
 function show_magicians(magicians : string[]){
     magicians.forEach(element => {
