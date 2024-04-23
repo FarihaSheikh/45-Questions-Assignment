@@ -8,16 +8,14 @@
 // using a different number of arguments each time. 
 
 
-function sandwich(...items: string[]): void{
-    console.log("Sandwich ingredients:")
+function makeSandwich (item :string[]) {
+    console.log('\nMaking your sandwich with:');
 
-    for (let i=0; i<items.length; i++){
-        console.log(` - ${items[i]}`)
-    }
+item.forEach(element => console.log(" - " + element));
+
+console.log('\nEnjoy your sandwich!\n');
 
 }
-console.log("Take your delicious sandwich Fariha Sheikh")
-
-sandwich('Tomatoes', 'Ketchup', 'Chicken')
-sandwich('Cheese', 'Mayonnise', 'Garlic Chicken')
-sandwich('Lettuce', 'Butter', 'Eggs', 'Ketchup')
+makeSandwich(['Tomatoes', 'Ketchup', 'Chicken']);
+makeSandwich(['Cheese', 'Mayonnise', 'Garlic Chicken']);
+makeSandwich(['Lettuce', 'Butter', 'Eggs', 'Ketchup']);
