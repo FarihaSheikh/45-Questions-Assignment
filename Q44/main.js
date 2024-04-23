@@ -1,11 +1,12 @@
 "use strict";
-function sandwich(...items) {
-    console.log("Sandwich ingredients:");
-    for (let i = 0; i < items.length; i++) {
-        console.log(` - ${items[i]}`);
-    }
+function makeSandwich (item :string[]) {
+    console.log('\nMaking your sandwich with:');
+
+item.forEach(element => console.log(" - " + element));
+
+console.log('\nEnjoy your sandwich!\n');
+
 }
-console.log("Take your delicious sandwich Fariha Sheikh");
-sandwich('Tomatoes', 'Ketchup', 'Chicken');
-sandwich('Cheese', 'Mayonnise', 'Garlic Chicken');
-sandwich('Lettuce', 'Butter', 'Eggs', 'Ketchup');
+makeSandwich(['Tomatoes', 'Ketchup', 'Chicken']);
+makeSandwich(['Cheese', 'Mayonnise', 'Garlic Chicken']);
+makeSandwich(['Lettuce', 'Butter', 'Eggs', 'Ketchup']);
