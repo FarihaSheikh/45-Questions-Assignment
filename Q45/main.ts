@@ -9,19 +9,11 @@
 //  to make sure all the information was stored correctly.
 
 
-type car = {
-    manufacture: string
-    model: string
-    [key: string]:  any;
+function make_car(manufacturer: string, model: string, ...options: [string, any][]): Object {
+    let car : any = { manufacturer, model };
+    options.forEach(([key, value]) => car[key] = value);
+    return car;
 }
 
-function createCar(manufacture: string , model: string , optional: Record<string, any>): car{
-    return {
-        manufacture,
-        model,
-        ...optional
-    }
-}
-
-const mycar: car = createCar('suzuki', '', { color: "Black" , year:"2023"})
-console.log(mycar)
+console.log(make_car("Toyota", "Corolla", ["color", "white"], ["year", 2023]));
+console.log(make_car("Suzuki", "Mehran", ["color", "blue"], ["sunroof", true]));
