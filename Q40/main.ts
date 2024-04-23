@@ -11,21 +11,22 @@
 //    that allows you to store the number of tracks on an album. If the calling line includes a value for the number of tracks, 
 //    add that value to the album’s Object. Make at least one new function call that includes the number of tracks on an album.
 
-function make_album (artist:string, title: string): {artist: string ; title: string} {
-    const albums ={
-        artist: artist.charAt(0).toUpperCase() + artist.slice(1),
-        title: title.charAt(0).toUpperCase() + title.slice(1)
-
-    };
+function make_album(artist: string ,title: string, tracks?: number) {
+    const albums :{artist: string, title: string, tracks?: number}={
+        artist: artist,
+        title: title
+}
+if(tracks !== undefined){
+    albums.tracks = tracks;
+}
     return albums;
 }
+const album1 = (make_album("Ali Zafar", "Jhoom"));
+console.log(album1);
 
-let album = make_album("Atif Aslam" , "Jal Pari")
-console.log(album)
+const album2 = (make_album("Atif Aslam", "Jal"));
+console.log(album2);
 
-album = make_album("Junaid Jamshed" , "Vital Signs")
-console.log(album)
-
-album = make_album("Ali Zafar" , "Jhoom")
-console.log(album)
+const album3 =(make_album("Junaid Jamshed", "Vital Signs", 12));
+console.log(album3);
 
