@@ -9,24 +9,34 @@
 // each magician’s name.
 
 
-function show_magicians(magicians : string[]): void {
-    for(const magician of magicians) {
-        console.log(magician.charAt(0).toUpperCase() + magician.slice(1));
-       
-    }
+let magician: string[] = ['Faizan', 'Ahmad', 'Saim', 'Salman'];
+
+function copyArray(arr: string[]){
+    return[...arr]
 }
 
-function make_great2(magicians: string[]): string[] {
-    const greatMagicians: string[]=[];
-    for(let i=0; i < magicians.length; i++){
-        greatMagicians.push(magicians[i] + ' the Great');
-    }
-    return greatMagicians;
+
+function make_great(magicianArray : string[]){
+for(let i = 0; i < magicianArray.length; i++){
+
+    magicianArray[i]  = 'the Great ' + magicianArray[i] 
 }
 
-const magicians3: string[]= ['faizan', 'ahmad', 'saim', 'salman'];
+}
 
-const greatMagicians2: string[]=make_great2(magicians3);
+function show_magicians(magicians : string[]){
+    magicians.forEach(element => {
+       console.log(element);
+        
+    });
+}
+const copyMagicianArray = copyArray(magician);
 
-show_magicians(magicians3);
-show_magicians(greatMagicians2);
+make_great(copyMagicianArray);
+
+console.log('\n\nThis is my orignal array:');
+show_magicians(magician);
+
+console.log('\n\nThis is my modified copy of the array:');
+show_magicians(copyMagicianArray);
+
