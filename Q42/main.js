@@ -1,16 +1,21 @@
 "use strict";
-function show_magicians(magicians) {
-    for (const magician of magicians) {
-        console.log(magician.charAt(0).toUpperCase() + magician.slice(1));
-    }
+
+let magician: string[] = ['faizan', 'ahmad', 'saim', 'salman'];
+
+function make_great(magicianArray : string[]){
+for(let i = 0; i < magicianArray.length; i++){
+
+   magician[i] = 'the Great ' + magicianArray[i] 
 }
-// const magician: string[] = ['faizan', 'ahmad', 'saim', 'salman'];
-// show_magicians(magician)
-function make_great(magicians) {
-    for (let i = 0; i < magicians.length; i++) {
-        magicians[i] = magicians[i] + ' the great';
-    }
+
 }
-const magicians2 = ['faizan', 'ahmad', 'saim', 'salman'];
-make_great(magicians2);
-show_magicians(magicians2);
+
+function show_magicians(magicians : string[]){
+    magicians.forEach(element => {
+       console.log(element);
+        
+    });
+}
+make_great(magician);
+show_magicians(magician);
+
