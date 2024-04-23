@@ -1,14 +1,19 @@
 "use strict";
-function make_album(artist, title) {
-    const albums = {
-        artist: artist.charAt(0).toUpperCase() + artist.slice(1),
-        title: title.charAt(0).toUpperCase() + title.slice(1)
-    };
+function make_album(artist: string ,title: string, tracks?: number) {
+    const albums :{artist: string, title: string, tracks?: number}={
+        artist: artist,
+        title: title
+}
+if(tracks !== undefined){
+    albums.tracks = tracks;
+}
     return albums;
 }
-let album = make_album("Atif Aslam", "Jal Pari");
-console.log(album);
-album = make_album("Junaid Jamshed", "Vital Signs");
-console.log(album);
-album = make_album("Ali Zafar", "Jhoom");
-console.log(album);
+const album1 = (make_album("Ali Zafar", "Jhoom"));
+console.log(album1);
+
+const album2 = (make_album("Atif Aslam", "Jal"));
+console.log(album2);
+
+const album3 =(make_album("Junaid Jamshed", "Vital Signs", 12));
+console.log(album3);
